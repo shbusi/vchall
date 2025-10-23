@@ -180,7 +180,7 @@ export default function Overlay() {
       }
 
       // HAND (엄지-검지 핀치)
-      + const hRes: HandLandmarkerResult | undefined = handRef.current?.detectForVideo(v, now);
+      const hRes: HandLandmarkerResult | undefined = handRef.current?.detectForVideo(v, now);
 
       let pinch = 1;
       if (hRes?.landmarks?.length) {
