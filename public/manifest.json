@@ -1,0 +1,11 @@
+{
+  "name": "Shorts Challenge Kit",
+  "short_name": "ShortsKit",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff5078",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

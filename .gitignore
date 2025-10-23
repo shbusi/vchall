@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# next build
+.next/
+out/
+.vercel/
+
+# env
+.env*
+.env.local
+
+# logs
+npm-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
