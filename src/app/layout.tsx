@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 export const metadata = {
   title: 'Shorts Challenge Kit',
   description: 'Camera AR overlay & OG card generator for shorts challenges',
@@ -12,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/manifest.json" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
       </head>
       <body>
         {children}
