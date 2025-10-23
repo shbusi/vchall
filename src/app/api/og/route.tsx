@@ -1,8 +1,7 @@
 import { ImageResponse } from 'next/og';
+
+// API Route에서는 runtime만 사용 (alt/size/contentType X)
 export const runtime = 'edge';
-export const alt = 'Challenge Card';
-export const size = { width: 1080, height: 1920 };
-export const contentType = 'image/png';
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -36,6 +35,7 @@ export async function GET(req: Request) {
         </div>
       </div>
     ),
-    { ...size }
+    // 여기서 width/height 지정 (API Route에서는 옵션으로 전달)
+    { width: 1080, height: 1920 }
   );
 }
