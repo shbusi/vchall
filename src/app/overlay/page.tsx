@@ -166,7 +166,7 @@ export default function Overlay() {
       lastT = now;
 
       // FACE
-      const fRes: FaceLandmarkerResult | undefined = faceRef.current?.detectForVideo(v);
+      const fRes: FaceLandmarkerResult | undefined = faceRef.current?.detectForVideo(v, now);
       let mouthOpen = 0, eyeL = 0, eyeR = 0;
       if (fRes?.faceBlendshapes?.length) {
         const cats = fRes.faceBlendshapes[0].categories;
@@ -180,7 +180,8 @@ export default function Overlay() {
       }
 
       // HAND (엄지-검지 핀치)
-      const hRes: HandLandmarkerResult | undefined = handRef.current?.detectForVideo(v);
+      + const hRes: HandLandmarkerResult | undefined = handRef.current?.detectForVideo(v, now);
+
       let pinch = 1;
       if (hRes?.landmarks?.length) {
         const lm = hRes.landmarks[0];
